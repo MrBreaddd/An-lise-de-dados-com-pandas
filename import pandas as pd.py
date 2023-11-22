@@ -38,13 +38,12 @@ genero_menos_vendido = generos_vendidos.apply(lambda x: x.iloc[0]).sort_values()
 #Separa os valores sem estilo em ordens crescente e descrescente.
 
 print("O gênero mais vendido é Fantasia com", generos_vendidos.max().max(),"cópias.");
-Organização em dataframe, filtragem para o maior valor e impressão
+#Organização em dataframe, filtragem para o maior valor e impressão
 
 genero_menos_vendido = generos_vendidos.min().min();
 print("O gênero menos vendido é comédia com", generos_vendidos.min().min(), "cópias.");
 #Filtragem para o maior e menor valor e imprime.
 
 
-'''
+
 #display(livros_df[['Título', 'Cópias vendidas']].sort_values(by='Cópias vendidas'))
-'''
