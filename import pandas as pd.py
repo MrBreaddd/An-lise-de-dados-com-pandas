@@ -6,13 +6,17 @@ livros_df = pd.read_excel('Vendas rede de livrarias(os 100 titulos mais vendidos
 #Abre a tabela e a atribui à variável livros_df
 
 
-
+##
+#Qual a média de vendas da livraria?
+##
 media_vendastotais = livros_df['Cópias vendidas'].mean();
 print("Média total de vendas da livraria:", media_vendastotais, "cópias.");
 #Destaca a coluna de copias vendidas, calcula a média dos valores e atribua à variável media_vendas, então imprime o valor
 
 
-
+###
+#Qual o gênero que mais vendeu e o que menos vendeu?
+###
 terror = livros_df['Gênero'] == 'Terror';
 fantasia = livros_df['Gênero'] == 'Fantásia';
 triller = livros_df['Gênero'] == 'Triller Policial ';
@@ -48,7 +52,9 @@ print("O gênero menos vendido é Comédia com", generos_vendidos.min().min(), "
 #Filtragem para o maior e menor valor e imprime.
 
 
-
+###
+#Qual a média de páginas dos top 10 livros?
+###
 livros_mais_vendidos = livros_df[['Título', 'Número de páginas', 'Cópias vendidas']].sort_values(by='Cópias vendidas', ascending=False).head(10);
 #Organiza os top 10 livros levando em consideração o número de cópias vendidas
 
@@ -59,7 +65,9 @@ print("A média de páginas dos top 10 livros mais vendidos é de",livros_mais_v
 #Imprime a média do número de páginas dos top 10
 
 
-
+###
+#Qual a editora que mais vendeu?
+###
 editora_vendas = livros_df[['Editora', 'Cópias vendidas']].groupby('Editora')['Cópias vendidas'].sum().reset_index();
 #Organiza as vendas por nome de editora, forma alternativa e mais eficiente em comparação
 # com o que foi feito com generos (linha 16 a 48).
