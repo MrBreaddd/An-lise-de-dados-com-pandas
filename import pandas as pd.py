@@ -77,3 +77,20 @@ editora_mais_vendas = editora_vendas.sort_values(by='Cópias vendidas', ascendin
 
 print("A editora que mais vendeu é Intrínseca com", editora_mais_vendas['Cópias vendidas'].to_string(index=False), "cópias vendidas.");
 #Imprime, forma alternativa de imprimir a partir de um dataframe
+
+
+###
+#Qual o autor que mais vendeu?
+###
+autor_vendas = livros_df[['Autor', 'Cópias vendidas']].groupby('Autor')['Cópias vendidas'].sum().reset_index();
+#Organiza as vendas com base no nome do autor
+
+autor_mais_vendas = autor_vendas.sort_values(by='Cópias vendidas', ascending=False).head(1);
+#Separa o autor com mais vendas
+
+
+print("O autor que mais vendeu é Stephen King com", autor_mais_vendas['Cópias vendidas'].to_string(index=False), "cópias vendidas.\n");
+
+debug = input(str("Deseja ver os dados calculados não organizados? Y/F: "))
+if debug == 'Y':
+    print(media_vendastotais, ", ", genero_mais_vendido, ", ", genero_menos_vendido, ", ", livros_mais_vendidos_media, ", ", editora_mais_vendas, ", ", autor_mais_vendas);
