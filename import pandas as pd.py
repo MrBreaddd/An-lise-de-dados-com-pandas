@@ -41,9 +41,12 @@ print("O gênero mais vendido é Fantasia com", generos_vendidos.max().max(),"c�
 #Organização em dataframe, filtragem para o maior valor e impressão
 
 genero_menos_vendido = generos_vendidos.min().min();
-print("O gênero menos vendido é comédia com", generos_vendidos.min().min(), "cópias.");
+print("O gênero menos vendido é Comédia com", generos_vendidos.min().min(), "cópias.");
 #Filtragem para o maior e menor valor e imprime.
 
 
+livros_mais_vendidos = livros_df[['Título', 'Número de páginas', 'Cópias vendidas']].sort_values(by='Cópias vendidas', ascending=False).head(10);
+#Organiza os top 10 livros levando em consideração o número de cópias vendidas
 
-#display(livros_df[['Título', 'Cópias vendidas']].sort_values(by='Cópias vendidas'))
+print("A média de páginas dos top 10 livros mais vendidos é de", livros_mais_vendidos['Número de páginas'].mean(), "páginas.");
+#Imprime a média do número de páginas dos top 10
