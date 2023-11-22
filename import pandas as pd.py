@@ -31,10 +31,20 @@ generos_vendidos = pd.DataFrame({
     'Romance': [romance_vendas],
     'Comédia': [comedia_vendas]
 })
-genero_mais_vendido = generos_vendidos.max().max();
-print("O gênero mais vendido é fantasia com", genero_mais_vendido, "cópias.");
-#Organização em dataframe, filtragem para o maior valor e impressão
+#Organiza as vendas totais em um dataframe
+
+genero_mais_vendido = generos_vendidos.apply(lambda x: x.iloc[0]).sort_values(ascending = False);
+genero_menos_vendido = generos_vendidos.apply(lambda x: x.iloc[0]).sort_values();
+#Separa os valores sem estilo em ordens crescente e descrescente.
+
+print("O gênero mais vendido é Fantasia com", generos_vendidos.max().max(),"cópias.");
+Organização em dataframe, filtragem para o maior valor e impressão
 
 genero_menos_vendido = generos_vendidos.min().min();
-print("O gênero menos vendido é comédia com", genero_menos_vendido, "cópias.");
-#Filtragem para o menor valor e impressão
+print("O gênero menos vendido é comédia com", generos_vendidos.min().min(), "cópias.");
+#Filtragem para o maior e menor valor e imprime.
+
+
+'''
+#display(livros_df[['Título', 'Cópias vendidas']].sort_values(by='Cópias vendidas'))
+'''
