@@ -1,0 +1,6 @@
+Qual o autor que mais vendeu cópias ?
+Qual gênero mais vende cópias?
+Qual gênero menos vende cópias ?
+#Qual a média de vendas anuais totais da livraria ?
+Qual editora vende mais cópias ?
+Qual a média de páginas dos 10 livros mais vendidos?
