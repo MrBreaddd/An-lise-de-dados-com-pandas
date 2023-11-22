@@ -1,6 +1,16 @@
 Qual o autor que mais vendeu cópias ?
-Qual gênero mais vende cópias?
-Qual gênero menos vende cópias ?
+#Qual gênero mais vende cópias?
+#Qual gênero menos vende cópias ?
 #Qual a média de vendas anuais totais da livraria ?
 Qual editora vende mais cópias ?
-Qual a média de páginas dos 10 livros mais vendidos?
+#Qual a média de páginas dos 10 livros mais vendidos?
+
+Fantásia             31
+Terror               22
+Triller Policial     20
+Romance              18
+Comedia               9
+
+media_vendastotais
+genero_mais_vendido
+genero_menos_vendido
